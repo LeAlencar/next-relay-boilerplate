@@ -24,10 +24,12 @@ repository(owner: "facebook", name: "relay") {
 `;
 
 const Home = ({queryRefs}: IndexProps) => {
-  const response = useLazyLoadQuery<pagesIndexQuery>(pagesIndexQuery, queryRefs.pagesIndexQuery,
-  {
-    fetchPolicy: "network-only"
-  }
+  const response = useLazyLoadQuery<pagesIndexQuery>(
+    pagesIndexQuery, 
+    queryRefs.pagesIndexQuery,
+    {
+      fetchPolicy: "network-only"
+    }
   );
 
   return (
